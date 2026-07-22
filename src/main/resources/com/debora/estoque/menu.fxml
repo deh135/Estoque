@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+
+<BorderPane prefHeight="450.0" prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.MenuController">
+   <left>
+      <VBox prefHeight="450.0" prefWidth="197.0" styleClass="menu" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="btnSair" mnemonicParsing="false" onAction="#aoSair" prefHeight="42.0" prefWidth="201.0" text="Visualizar Estoque" textFill="#f8f2f1">
+               <styleClass>
+                  <String fx:value="titulo" />
+                  <String fx:value="botao-menu" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnSair1" layoutX="20.0" layoutY="15.0" mnemonicParsing="false" onAction="#aoSair" prefHeight="42.0" prefWidth="201.0" text="Entrada de Produtos" textFill="#f8f2f1">
+               <styleClass>
+                  <String fx:value="titulo" />
+                  <String fx:value="botao-menu" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnSair11" layoutX="20.0" layoutY="57.0" mnemonicParsing="false" onAction="#aoSair" prefHeight="42.0" prefWidth="201.0" text="Relatorio" textFill="#f8f2f1">
+               <styleClass>
+                  <String fx:value="titulo" />
+                  <String fx:value="botao-menu" />
+               </styleClass>
+            </Button>
+            <Button fx:id="btnSair111" layoutX="20.0" layoutY="99.0" mnemonicParsing="false" onAction="#aoSair" prefHeight="42.0" prefWidth="201.0" text="Sair" textFill="#f8f2f1">
+               <styleClass>
+                  <String fx:value="titulo" />
+                  <String fx:value="botao-menu" />
+               </styleClass>
+               <graphic>
+                  <FontIcon iconColor="#330708" iconLiteral="mdi2e-exit-to-app" iconSize="30" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" styleClass="fundo" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

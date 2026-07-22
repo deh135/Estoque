@@ -1,0 +1,18 @@
+.root{
+    -fx-background-radius : 8;
+
+}
+.menu{
+    -fx-background-color:  #d9abff;
+}
+.titulo{
+    -fx-text-fill:  #330708 ;
+
+}
+.botao-menu{
+    -fx-background-color :  transparent;
+}
+
+.fundo{
+    -fx-background-color :  #f8f2f1;
+}
