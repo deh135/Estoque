@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1; -fx-background-radius: 8;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.ProdutoController">
+   <children>
+      <TextField layoutX="108.0" layoutY="192.0" prefHeight="31.0" prefWidth="471.0" style="-fx-border-color: #d9abff; -fx-border-radius: 8;" />
+      <TextField layoutX="108.0" layoutY="261.0" prefHeight="31.0" prefWidth="471.0" style="-fx-border-color: #d9abff; -fx-border-radius: 8;" />
+      <TextField layoutX="108.0" layoutY="335.0" prefHeight="31.0" prefWidth="471.0" style="-fx-border-color: #d9abff; -fx-border-radius: 8;" />
+   </children>
+</AnchorPane>

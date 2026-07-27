@@ -54,7 +54,7 @@
          <Insets top="10.0" />
       </padding>
    </TextFlow>
-    <Button fx:id="btnAcessar" onAction="#aoApertarBotao" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #d9abff;" text="Acessar" textFill="WHITE">
+    <Button fx:id="btnAcessar" onAction="#aoApertarBotao" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #d9abff;" text="Acessar" textFill="#be7485">
       <font>
          <Font name="Arial" size="15.0" />
       </font></Button>

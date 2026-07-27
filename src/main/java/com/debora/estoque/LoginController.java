@@ -47,6 +47,6 @@ public class LoginController {
     }
     @FXML
     protected void aoEsquecerSenha(){
-        System.out.println("kk");
+        System.out.println("Você esqueceu! Ja não e problema meu.");
     }
 }

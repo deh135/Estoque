@@ -61,18 +61,18 @@
          </padding>
       </VBox>
    </center>
-   <bottom>
+   <center>
       <TableView prefHeight="339.0" prefWidth="700.0" BorderPane.alignment="CENTER">
         <columns>
           <TableColumn prefWidth="122.0" text="ID" />
           <TableColumn prefWidth="128.0" text="Nome" />
-            <TableColumn prefWidth="146.0" text="Categoria" />
-            <TableColumn prefWidth="136.0" text="Quantidade" />
-            <TableColumn prefWidth="107.0" text="Preco(R$)" />
+            <TableColumn prefWidth="141.0" text="Categoria" />
+            <TableColumn prefWidth="134.0" text="Quantidade" />
+            <TableColumn prefWidth="114.0" text="Preco(R$)" />
         </columns>
          <BorderPane.margin>
             <Insets bottom="10.0" left="30.0" right="30.0" />
          </BorderPane.margin>
       </TableView>
-   </bottom>
+   </center>
 </BorderPane>
