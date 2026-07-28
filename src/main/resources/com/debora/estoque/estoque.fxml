@@ -11,24 +11,26 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.EstoqueController">
-   <center>
-      <VBox prefHeight="113.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+<BorderPane prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.controller.EstoqueController">
+   <top>
+      <VBox prefHeight="121.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="21.0" prefWidth="220.0" text="Produtos em Estoque" textFill="#330708">
+            <Label text="Estoque de Produtos" textFill="#801245">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
                <font>
-                  <Font name="Broadway" size="18.0" />
+                  <Font name="Broadway" size="20.0" />
                </font>
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField prefHeight="31.0" prefWidth="294.0">
+                  <TextField prefHeight="25.0" prefWidth="270.0">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" style="-fx-background-color: #d9abff;" text="+Adicionar" textFill="#330708">
+                  <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="+ Adicionar">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -36,40 +38,33 @@
                         <Font name="Bell MT" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="197.0" layoutY="10.0" mnemonicParsing="false" style="-fx-background-color: #d9abff;" text="Editar" textFill="#330708">
+                  <Button layoutX="159.0" layoutY="10.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Editar">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
-                     <font>
-                        <Font name="Bell MT" size="15.0" />
-                     </font>
                   </Button>
-                  <Button layoutX="511.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #d9abff;" text="Remover" textFill="#330708">
+                  <Button layoutX="221.0" layoutY="10.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Remover">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
-                     <font>
-                        <Font name="Bell MT" size="15.0" />
-                     </font>
                   </Button>
-                  <Button layoutX="521.0" layoutY="27.0" mnemonicParsing="false" style="-fx-background-color: #d9abff;" text="voltar" textFill="#330708" />
+                  <Button fx:id="btnVoltar" layoutX="283.0" layoutY="10.0" mnemonicParsing="false" onAction="#aoVoltarMenu" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Voltar" />
                </children>
             </HBox>
          </children>
          <padding>
-            <Insets bottom="10.0" left="30.0" right="30.0" top="10.0" />
-         </padding>
-      </VBox>
-   </center>
+            <Insets bottom="10.0" left="30.0" right="30.0" top="20.0" />
+         </padding></VBox>
+   </top>
    <center>
-      <TableView prefHeight="339.0" prefWidth="700.0" BorderPane.alignment="CENTER">
-        <columns>
-          <TableColumn prefWidth="122.0" text="ID" />
-          <TableColumn prefWidth="128.0" text="Nome" />
-            <TableColumn prefWidth="141.0" text="Categoria" />
-            <TableColumn prefWidth="134.0" text="Quantidade" />
-            <TableColumn prefWidth="114.0" text="Preco(R$)" />
-        </columns>
+      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn prefWidth="54.333335876464844" text="ID" />
+            <TableColumn prefWidth="257.33331298828125" text="Nome" />
+            <TableColumn minWidth="0.0" prefWidth="158.66668701171875" text="Categoria" />
+            <TableColumn minWidth="0.0" prefWidth="82.33334350585938" text="Quantidade" />
+            <TableColumn minWidth="0.0" prefWidth="87.66668701171875" text="Preço (R$)" />
+         </columns>
          <BorderPane.margin>
             <Insets bottom="10.0" left="30.0" right="30.0" />
          </BorderPane.margin>

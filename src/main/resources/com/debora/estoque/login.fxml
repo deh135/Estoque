@@ -11,12 +11,12 @@
 <?import javafx.scene.text.TextFlow?>
 <?import org.kordamp.ikonli.javafx.FontIcon?>
 
-<VBox alignment="CENTER" prefHeight="450.0" prefWidth="700.0" spacing="20.0" style="-fx-border-radius: 7; -fx-text-fill: #be7485; -fx-background-radius: 7; -fx-background-color: #f8f2f1;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.LoginController">
+<VBox alignment="CENTER" prefHeight="450.0" prefWidth="700.0" spacing="20.0" style="-fx-border-radius: 7; -fx-text-fill: #be7485; -fx-background-radius: 7; -fx-background-color: #f8f2f1;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.controller.LoginController">
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <FontIcon iconColor="#d9abff" iconLiteral="mdi2a-account-credit-card-outline" iconSize="50" selectionEnd="0" />
-   <Text fill="#d9abff" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de estoque" textAlignment="CENTER" wrappingWidth="179.646484375">
+   <FontIcon iconColor="#801245" iconLiteral="mdi2a-account-credit-card-outline" iconSize="50" selectionEnd="0" text="󱮧" />
+   <Text fill="#801245" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de estoque" textAlignment="CENTER" wrappingWidth="179.646484375">
       <VBox.margin>
          <Insets />
       </VBox.margin>
@@ -54,7 +54,7 @@
          <Insets top="10.0" />
       </padding>
    </TextFlow>
-    <Button fx:id="btnAcessar" onAction="#aoApertarBotao" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #d9abff;" text="Acessar" textFill="#be7485">
+    <Button fx:id="btnAcessar" onAction="#aoApertarBotao" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #d9abff;" text="Acessar">
       <font>
          <Font name="Arial" size="15.0" />
       </font></Button>
