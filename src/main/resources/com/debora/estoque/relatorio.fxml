@@ -10,7 +10,7 @@
 
 <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.controller.RelatorioController">
 <children>
-    <Label styleClass="texto-principal" text="Relatório de Produtos no Estoque" textFill="#801245">
+    <Label styleClass="texto-principal" text="Relatório de Produtos no Estoque" textFill="#330708">
         <font>
             <Font name="Broadway" size="20.0" />
         </font>

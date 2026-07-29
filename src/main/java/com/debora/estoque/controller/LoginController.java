@@ -8,6 +8,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.TextFlow;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.Map;
 
 public class LoginController {
     @FXML
@@ -19,22 +21,30 @@ public class LoginController {
     @FXML
     private TextFlow erroDados;
 
-    private final String usuarioCadastrado = "deh";
-    private final String senhaCadastrada = "12345";
+    private Map<String, String> usuarioscadastrados = Map.of(
+            "admi@gmail.com", "admin",
+            "debora@gmail.com", "1213",
+            "funci@gamil.com", "123",
+            "deh", "12345"
 
+    );
 
 
 
     @FXML
     protected void aoApertarBotao(ActionEvent event) throws IOException {
 
-        if (usuarioCadastrado.equalsIgnoreCase(usuario.getText()) && senhaCadastrada.equals(senha.getText())){
-            GerenciadorTela.getIntancia().trocarTela(event, "menu.fxml", "Sistema de Estoque - Menu");
+        String usuarioDigitado = usuario.getText().toLowerCase();
+        String senhaDigitada = senha.getText();
 
-        }else {
+        if (usuarioscadastrados.containsKey(usuarioDigitado) && usuarioscadastrados.get(usuarioDigitado).equals(senhaDigitada) ) {
+
+            GerenciadorTela.getIntancia().trocarTela(event, "menu.fxml", "Sistema Estoque - Menu");
+        } else {
             erroDados.setVisible(true);
         }
     }
+
     @FXML
     protected void aoEsquecerSenha(){
         System.out.println("Você esqueceu! Ja não e problema meu.");

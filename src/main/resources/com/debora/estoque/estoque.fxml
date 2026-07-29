@@ -15,7 +15,7 @@
    <top>
       <VBox prefHeight="121.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Estoque de Produtos" textFill="#801245">
+            <Label text="Estoque de Produtos" textFill="#330708">
                <VBox.margin>
                   <Insets bottom="10.0" />
                </VBox.margin>
@@ -48,7 +48,10 @@
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="btnVoltar" layoutX="283.0" layoutY="10.0" mnemonicParsing="false" onAction="#aoVoltarMenu" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Voltar" />
+                  <Button fx:id="btnVoltar" layoutX="283.0" layoutY="10.0" mnemonicParsing="false" onAction="#aoVoltarMenu" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Voltar">
+                     <font>
+                        <Font name="Bell MT" size="15.0" />
+                     </font></Button>
                </children>
             </HBox>
          </children>
@@ -59,11 +62,11 @@
    <center>
       <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <columns>
-            <TableColumn prefWidth="54.333335876464844" text="ID" />
-            <TableColumn prefWidth="257.33331298828125" text="Nome" />
-            <TableColumn minWidth="0.0" prefWidth="158.66668701171875" text="Categoria" />
-            <TableColumn minWidth="0.0" prefWidth="82.33334350585938" text="Quantidade" />
-            <TableColumn minWidth="0.0" prefWidth="87.66668701171875" text="Preço (R$)" />
+            <TableColumn prefWidth="73.0" text="ID" />
+            <TableColumn prefWidth="156.0" text="Nome" />
+            <TableColumn minWidth="0.0" prefWidth="165.0" text="Categoria" />
+            <TableColumn minWidth="0.0" prefWidth="127.0" text="Quantidade" />
+            <TableColumn minWidth="0.0" prefWidth="122.0" text="Preço (R$)" />
          </columns>
          <BorderPane.margin>
             <Insets bottom="10.0" left="30.0" right="30.0" />

@@ -15,8 +15,8 @@
     <padding>
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
     </padding>
-   <FontIcon iconColor="#801245" iconLiteral="mdi2a-account-credit-card-outline" iconSize="50" selectionEnd="0" text="󱮧" />
-   <Text fill="#801245" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de estoque" textAlignment="CENTER" wrappingWidth="179.646484375">
+   <FontIcon iconColor="#330708" iconLiteral="mdi2a-account-credit-card-outline" iconSize="50" selectionEnd="0" text="󱮧" />
+   <Text fill="#330708" strokeType="OUTSIDE" strokeWidth="0.0" text="Sistema de estoque" textAlignment="CENTER" wrappingWidth="179.646484375">
       <VBox.margin>
          <Insets />
       </VBox.margin>
@@ -56,9 +56,9 @@
    </TextFlow>
     <Button fx:id="btnAcessar" onAction="#aoApertarBotao" prefHeight="32.0" prefWidth="199.0" style="-fx-background-color: #d9abff;" text="Acessar">
       <font>
-         <Font name="Arial" size="15.0" />
+         <Font name="Bell MT" size="15.0" />
       </font></Button>
-   <Label fx:id="recuperarSenha" onMouseClicked="#aoEsquecerSenha" text="esqueceu sua senha? Recupere aqui" textAlignment="CENTER" textFill="#be7485" textOverrun="WORD_ELLIPSIS">
+   <Label fx:id="recuperarSenha" onMouseClicked="#aoEsquecerSenha" text="esqueceu sua senha? Recupere aqui" textAlignment="CENTER" textFill="#330708" textOverrun="WORD_ELLIPSIS">
       <font>
          <Font name="Calibri" size="16.0" />
       </font>

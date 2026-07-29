@@ -13,7 +13,7 @@
     <top>
         <VBox prefHeight="77.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" styleClass="root" BorderPane.alignment="CENTER">
             <children>
-                <Label styleClass="texto-principal" text="Dados do Produto" textFill="#801245">
+                <Label styleClass="texto-principal" text="Dados do Produto" textFill="#330708">
                     <VBox.margin>
                         <Insets bottom="10.0" />
                     </VBox.margin>
@@ -31,12 +31,12 @@
             <children>
                 <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;">
                     <children>
-                        <Label styleClass="root" text="Nome" textFill="#801245">
+                        <Label styleClass="root" text="Nome" textFill="#330708">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="540.0" />
+                        <TextField fx:id="campoNome" prefHeight="35.0" prefWidth="540.0" />
                     </children>
                     <padding>
                         <Insets left="80.0" right="80.0" />
@@ -44,12 +44,12 @@
                 </VBox>
                 <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="72.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;">
                     <children>
-                        <Label styleClass="root" text="Categoria" textFill="#801245">
+                        <Label styleClass="root" text="Categoria" textFill="#330708">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="540.0" />
+                        <TextField fx:id="campoCategoria" prefHeight="35.0" prefWidth="540.0" />
                     </children>
                     <padding>
                         <Insets left="80.0" right="80.0" />
@@ -57,12 +57,12 @@
                 </VBox>
                 <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="75.0" prefHeight="75.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;">
                     <children>
-                        <Label styleClass="root" text="Quantidade" textFill="#801245">
+                        <Label styleClass="root" text="Quantidade" textFill="#330708">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="540.0" />
+                        <TextField fx:id="campoQuantidade" prefHeight="35.0" prefWidth="540.0" />
                     </children>
                     <padding>
                         <Insets left="80.0" right="80.0" />
@@ -70,12 +70,12 @@
                 </VBox>
                 <VBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="140.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;">
                     <children>
-                        <Label styleClass="root" text="Preço" textFill="#801245">
+                        <Label styleClass="root" text="Preço" textFill="#330708">
                             <font>
                                 <Font size="14.0" />
                             </font>
                         </Label>
-                        <TextField prefHeight="35.0" prefWidth="540.0" />
+                        <TextField fx:id="campoPreco" prefHeight="35.0" prefWidth="540.0" />
                     </children>
                     <padding>
                         <Insets left="80.0" right="80.0" />
