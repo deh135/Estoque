@@ -23,9 +23,9 @@ public class EstoqueDAO {
         listaProdutos.add(produto);
     }
     public ObservableList<Produto> ListaProdutos(){
-        return ListaProdutos();
+        return listaProdutos;
     }
     public void remover(Produto produto){
-        ListaProdutos().remove(produto);
+        listaProdutos.remove(produto);
     }
 }

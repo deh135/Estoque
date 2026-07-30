@@ -25,12 +25,12 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="270.0">
+                  <TextField fx:id="campoBusca" prefHeight="25.0" prefWidth="270.0">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </TextField>
-                  <Button mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="+ Adicionar">
+                  <Button fx:id="btnAdicionar" mnemonicParsing="false" onAction="#adicionarProduto" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="+ Adicionar">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -38,12 +38,12 @@
                         <Font name="Bell MT" size="15.0" />
                      </font>
                   </Button>
-                  <Button layoutX="159.0" layoutY="10.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Editar">
+                  <Button fx:id="btnEditar" layoutX="159.0" layoutY="10.0" mnemonicParsing="false" onAction="#editarProduto" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Editar">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
                   </Button>
-                  <Button layoutX="221.0" layoutY="10.0" mnemonicParsing="false" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Remover">
+                  <Button fx:id="btnRemover" layoutX="221.0" layoutY="10.0" mnemonicParsing="false" onAction="#removerProduto" prefWidth="80.0" style="-fx-background-color: #d9abff;" text="Remover">
                      <HBox.margin>
                         <Insets right="10.0" />
                      </HBox.margin>
@@ -60,13 +60,13 @@
          </padding></VBox>
    </top>
    <center>
-      <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="tabelaProdutos" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <columns>
-            <TableColumn prefWidth="73.0" text="ID" />
-            <TableColumn prefWidth="156.0" text="Nome" />
-            <TableColumn minWidth="0.0" prefWidth="165.0" text="Categoria" />
-            <TableColumn minWidth="0.0" prefWidth="127.0" text="Quantidade" />
-            <TableColumn minWidth="0.0" prefWidth="122.0" text="Preço (R$)" />
+            <TableColumn fx:id="colunaID" prefWidth="73.0" text="ID" />
+            <TableColumn fx:id="colunaNome" prefWidth="156.0" text="Nome" />
+            <TableColumn fx:id="colunaCategoria" minWidth="0.0" prefWidth="165.0" text="Categoria" />
+            <TableColumn fx:id="colunaQuantidade" minWidth="0.0" prefWidth="127.0" text="Quantidade" />
+            <TableColumn fx:id="colunaPreco" minWidth="0.0" prefWidth="122.0" text="Preço (R$)" />
          </columns>
          <BorderPane.margin>
             <Insets bottom="10.0" left="30.0" right="30.0" />

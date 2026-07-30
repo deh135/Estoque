@@ -43,6 +43,7 @@ public class LoginController {
         } else {
             erroDados.setVisible(true);
         }
+
     }
 
     @FXML
