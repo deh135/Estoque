@@ -20,7 +20,7 @@
     </Label>
     <HBox prefHeight="225.0" prefWidth="620.0">
         <children>
-            <VBox alignment="CENTER" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+            <VBox fx:id="btnProdutosCadastrados" alignment="CENTER" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
                 <children>
                     <Label alignment="CENTER" text="0" textAlignment="CENTER">
                         <font>
@@ -37,7 +37,7 @@
                     <Insets right="15.0" />
                 </HBox.margin>
             </VBox>
-            <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="205.0" prefWidth="292.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+            <VBox fx:id="btnValorTotal" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="205.0" prefWidth="292.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
                 <children>
                     <Label alignment="CENTER" text="0" textAlignment="CENTER">
                         <font>
@@ -54,7 +54,7 @@
                     <Insets right="15.0" />
                 </HBox.margin>
             </VBox>
-            <VBox alignment="CENTER" layoutX="154.0" layoutY="20.0" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+            <VBox fx:id="btnestoqueAbaixo" alignment="CENTER" layoutX="154.0" layoutY="20.0" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
                 <children>
                     <Label alignment="CENTER" text="0" textAlignment="CENTER">
                         <font>

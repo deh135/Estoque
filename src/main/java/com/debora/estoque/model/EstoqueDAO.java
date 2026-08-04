@@ -5,12 +5,9 @@ import javafx.collections.ObservableList;
 
 public class EstoqueDAO {
     private static EstoqueDAO instancia;
-    private final ObservableList<Produto> listaProdutos;
-    private int idProduto;
+    private final ObservableList<Produto> ProdutosList;
+    private int idProduto = 1;
 
-    private EstoqueDAO(){
-        this.listaProdutos = FXCollections.observableArrayList();
-    }
 
     public static EstoqueDAO getInstance(){
         if ( instancia == null){
@@ -20,12 +17,20 @@ public class EstoqueDAO {
     }
     public void adicionar(Produto produto){
         produto.setId(idProduto++);
-        listaProdutos.add(produto);
+        ProdutosList.add(produto);
     }
-    public ObservableList<Produto> ListaProdutos(){
-        return listaProdutos;
+
+    public ObservableList<Produto> listarProdutos(){
+        return ProdutosList;
     }
+
     public void remover(Produto produto){
-        listaProdutos.remove(produto);
+        ProdutosList.remove(produto);
     }
+
+    public double calcularTotalEstoque(){
+        double valorTotal = ProdutosList.stream().mapToDouble(Produto::getValorTotal).sum();
+    }
+
+
 }

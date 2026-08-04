@@ -29,7 +29,7 @@ public class ProdutoController {
     private Button botaoSalvar;
 
 
-    private final EstoqueDAO dadoEstoque = EstoqueDAO.getInstance();
+    private final EstoqueDAO dadosEstoque = EstoqueDAO.getInstance();
 
     private Produto produtoEmEdicao;
 
@@ -40,7 +40,6 @@ public class ProdutoController {
         campoQuantidade.setText(String.valueOf(produto.getQuantidade()));
         campoPreco.setText(String.valueOf(produto.getPreco()));
         botaoSalvar.setText("Salvar Alteracoes");
-
     }
 
     @FXML
@@ -49,12 +48,10 @@ public class ProdutoController {
         String categoria = campoCategoria.getText();
         if (nome == null || nome.isBlank() || categoria == null || categoria.isBlank()) {
             mostrarErro("informe um nome ou uma categoria valida!");
+            return;
         }
-        ;
-
         int quantidade;
         double preco;
-
         try {
             quantidade = Integer.parseInt(campoQuantidade.getText().trim());
             preco = Double.parseDouble(campoPreco.getText().trim().replace(",", "."));
@@ -65,15 +62,16 @@ public class ProdutoController {
 
         if (produtoEmEdicao == null) {
             Produto produto = new Produto(0, nome, categoria, quantidade, preco);
-            dadoEstoque.adicionar(produto);
+            dadosEstoque.adicionar(produto);
             mostrarSucesso(event, "produto inserido com sucesso!");
         } else {
             produtoEmEdicao.setNome(nome);
             produtoEmEdicao.setCategoria(categoria);
             produtoEmEdicao.setQuantidade(quantidade);
             produtoEmEdicao.setPreco(preco);
+            mostrarSucesso(event, "Produto editado com sucesso!");
         }
-
+        dadosEstoque.listarProdutos().forEach(System.out::println);
     }
 
     private void mostrarErro(String mensagem){
@@ -84,17 +82,14 @@ public class ProdutoController {
 
     private void mostrarSucesso(ActionEvent event, String mensagem) throws IOException{
         Alert confirmacao = new Alert(Alert.AlertType.INFORMATION, mensagem);
+        confirmacao.setHeaderText(null);
         confirmacao.showAndWait();
         GerenciadorTela.getIntancia().trocarTela(event, "estoque.fxml", "Sistema de estoque - Estoque" );
     }
-
-
-
 
     @FXML
     protected  void cancelar(ActionEvent event) throws IOException {
         GerenciadorTela.getIntancia().trocarTela(event, "menu.fxml", "Sistema de Estoque - Menu");
     }
-
 
 }

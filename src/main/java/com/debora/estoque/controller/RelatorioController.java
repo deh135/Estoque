@@ -8,6 +8,8 @@ import java.io.IOException;
 
 public class RelatorioController {
 
+
+
     @FXML
     protected void aoVoltarMenu(ActionEvent event) throws IOException{
         GerenciadorTela.getIntancia().trocarTela(event, "menu.fxml", "Sistema do Estoque - Menu");
