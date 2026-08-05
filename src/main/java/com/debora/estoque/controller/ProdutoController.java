@@ -29,7 +29,7 @@ public class ProdutoController {
     private Button botaoSalvar;
 
 
-    private final EstoqueDAO dadosEstoque = EstoqueDAO.getInstance();
+    private final EstoqueDAO dadosEstoque = EstoqueDAO.getInstancia();
 
     private Produto produtoEmEdicao;
 

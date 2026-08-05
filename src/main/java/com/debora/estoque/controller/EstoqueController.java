@@ -3,20 +3,18 @@ package com.debora.estoque.controller;
 import com.debora.estoque.model.EstoqueDAO;
 import com.debora.estoque.model.Produto;
 import com.debora.estoque.util.GerenciadorTela;
-import javafx.beans.InvalidationListener;
 import javafx.collections.transformation.FilteredList;
-import javafx.fxml.FXML;
-
-import java.io.IOException;
-
 import javafx.event.ActionEvent;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
+import java.io.IOException;
+import java.text.NumberFormat;
+import java.util.Locale;
 
-public class EstoqueController{
+public class EstoqueController {
+
     @FXML
     private TextField campoBusca;
 
@@ -24,7 +22,7 @@ public class EstoqueController{
     private TableView tabelaProdutos;
 
     @FXML
-    private TableColumn colunaID;
+    private TableColumn colunaId;
 
     @FXML
     private TableColumn colunaNome;
@@ -38,45 +36,80 @@ public class EstoqueController{
     @FXML
     private TableColumn colunaPreco;
 
-    private final EstoqueDAO dadosEstoque = EstoqueDAO.getInstance();
-    private FilteredList<Produto> ListaFiltrada;
+    private final EstoqueDAO dadosEstoque =  EstoqueDAO.getInstancia();
+    private FilteredList<Produto> listaFiltrada;
 
     @FXML
     public void initialize(){
-        colunaID.setCellValueFactory( new PropertyValueFactory<>("id"));
+
+        NumberFormat moedaFormatada = NumberFormat.getCurrencyInstance(new Locale("pr", "BR"));
+        colunaId.setCellValueFactory( new PropertyValueFactory<>("id"));
         colunaNome.setCellValueFactory( new PropertyValueFactory<>("nome"));
         colunaCategoria.setCellValueFactory( new PropertyValueFactory<>("categoria"));
         colunaQuantidade.setCellValueFactory( new PropertyValueFactory<>("quantidade"));
-        colunaPreco.setCellValueFactory( new PropertyValueFactory<>("preco"));
+        colunaPreco.setCellValueFactory(new PropertyValueFactory<>("preco"));
 
-        ListaFiltrada = new FilteredList<>( dadosEstoque.ListaProdutos(), p -> true);
-        tabelaProdutos.setItems(ListaFiltrada);
+        listaFiltrada = new FilteredList<>( dadosEstoque.listarProdutos(), p -> true);
+        tabelaProdutos.setItems(listaFiltrada);
 
-        campoBusca.textProperty().addListener((obs, textoAntigo, textoNovo) ->{
+        campoBusca.textProperty().addListener( (obs, textoAntigo, textoNovo) ->{
             String filtro = textoNovo == null ? "" : textoNovo.toLowerCase();
-            ListaFiltrada.setPredicate(produto -> filtro.isEmpty() || produto.getNome().contains
-                    (filtro) || produto.getCategoria().toLowerCase().contains(filtro) || String.valueOf(produto.getPreco()).contains(filtro));
-        });
+            listaFiltrada.setPredicate( produto -> filtro.isEmpty() || produto.getNome().toLowerCase().contains(filtro) || produto.getCategoria().toLowerCase().contains(filtro) || String.valueOf(produto.getPreco()).contains(filtro));
+        } );
+    }
+
+
+    @FXML
+    protected void  adicionarProduto(ActionEvent event) throws IOException {
+        GerenciadorTela.getInstancia().trocarTela(event, "produto.fxml", "Sistema de Estoque - Adicionar Produto");
     }
 
     @FXML
-    protected  void adicionarProduto(){
-
+    protected  void editarProduto(ActionEvent event) throws IOException{
+        Produto produtoSelecionado = (Produto) tabelaProdutos.getSelectionModel().getSelectedItem();
+        if( produtoSelecionado == null){
+            mostrarAlerta("Selecione um produto para editar!");
+            return;
+        }
+        GerenciadorTela.getInstancia().telaEdicao(
+                event,
+                "produto.fxml",
+                "Sistema de Estoque - Editar Produto",
+                (ProdutoController controller) -> controller.preencherParaEdicao(produtoSelecionado)
+        );
     }
 
-    @FXML
-    protected  void editarProduto(){
 
+    public void mostrarAlerta(String mensagem){
+        Alert alerta = new Alert(Alert.AlertType.INFORMATION, mensagem);
+        alerta.setHeaderText(null);
+        alerta.showAndWait();
     }
 
     @FXML
     protected void removerProduto(){
+        Produto produtoSelecionado = (Produto) tabelaProdutos.getSelectionModel().getSelectedItem();
+        if( produtoSelecionado == null){
+            mostrarAlerta("Selecione um produto para remover !");
+            return;
+        }
+
+        Alert confirmacao = new Alert(Alert.AlertType.CONFIRMATION, "Remover o produto "+ produtoSelecionado.getNome() + " do estoque? ");
+        confirmacao.setHeaderText(null);
+        ButtonType btnSim = new ButtonType("Sim");
+        ButtonType btnNao = new ButtonType("Não");
+        confirmacao.getButtonTypes().setAll(btnSim, btnNao);
+        confirmacao.showAndWait().ifPresent( botao -> {
+            if ( botao == btnSim){
+                dadosEstoque.remover(produtoSelecionado);
+            }
+        });
     }
 
 
     @FXML
     protected void  aoVoltarMenu(ActionEvent event) throws IOException {
-        GerenciadorTela.getIntancia().trocarTela(event, "menu.fxml", "Sistema de Estoque - Menu");
-
+        GerenciadorTela.getInstancia().trocarTela(event, "menu.fxml", "Sistema de Estoque - Menu");
     }
+
 }

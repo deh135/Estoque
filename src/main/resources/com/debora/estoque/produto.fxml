@@ -27,13 +27,13 @@
             </padding></VBox>
     </top>
     <center>
-        <VBox prefHeight="380.0" prefWidth="700.0" BorderPane.alignment="CENTER">
+        <VBox prefHeight="380.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" BorderPane.alignment="CENTER">
             <children>
                 <VBox alignment="CENTER_LEFT" prefHeight="74.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;">
                     <children>
                         <Label styleClass="root" text="Nome" textFill="#330708">
                             <font>
-                                <Font size="14.0" />
+                                <Font name="Bell MT" size="14.0" />
                             </font>
                         </Label>
                         <TextField fx:id="campoNome" prefHeight="35.0" prefWidth="540.0" />
@@ -86,7 +86,7 @@
                         <Insets left="80.0" right="80.0" />
                     </padding>
                     <children>
-                        <Button mnemonicParsing="false" onAction="#cancelar" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #d9abff;" styleClass="botao" text="Cancelar">
+                        <Button fx:id="botaoCancelar" minHeight="35.0" minWidth="114.0" mnemonicParsing="false" onAction="#cancelar" style="-fx-background-color: #d9abff;" styleClass="botao" text="Cancelar" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="14.0" />
                             </font>
@@ -94,7 +94,7 @@
                                 <Insets right="20.0" />
                             </HBox.margin>
                         </Button>
-                        <Button layoutX="496.0" layoutY="26.0" mnemonicParsing="false" onAction="#salvar" prefHeight="35.0" prefWidth="114.0" style="-fx-background-color: #d9abff;" styleClass="botao" text="Salvar">
+                        <Button fx:id="botaoSalvar" layoutX="496.0" layoutY="26.0" minHeight="35.0" minWidth="114.0" mnemonicParsing="false" onAction="#salvar" style="-fx-background-color: #d9abff;" styleClass="botao" text="Salvar" HBox.hgrow="ALWAYS">
                             <font>
                                 <Font size="14.0" />
                             </font>

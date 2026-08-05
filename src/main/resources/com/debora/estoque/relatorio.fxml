@@ -9,86 +9,86 @@
 <?import javafx.scene.text.Font?>
 
 <VBox alignment="TOP_CENTER" prefHeight="450.0" prefWidth="700.0" style="-fx-background-color: #f8f2f1;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.debora.estoque.controller.RelatorioController">
-<children>
-    <Label styleClass="texto-principal" text="Relatório de Produtos no Estoque" textFill="#330708">
-        <font>
-            <Font name="Broadway" size="20.0" />
-        </font>
-        <VBox.margin>
-            <Insets bottom="20.0" top="20.0" />
-        </VBox.margin>
-    </Label>
-    <HBox prefHeight="225.0" prefWidth="620.0">
-        <children>
-            <VBox fx:id="btnProdutosCadastrados" alignment="CENTER" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
-                <children>
-                    <Label alignment="CENTER" text="0" textAlignment="CENTER">
-                        <font>
-                            <Font name="Comic Sans MS Bold" size="48.0" />
-                        </font>
-                        <styleClass>
-                            <String fx:value="titulo" />
-                            <String fx:value="texto-principal" />
-                        </styleClass>
-                    </Label>
-                    <Label layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Produtos Cadastrados" />
-                </children>
-                <HBox.margin>
-                    <Insets right="15.0" />
-                </HBox.margin>
-            </VBox>
-            <VBox fx:id="btnValorTotal" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="205.0" prefWidth="292.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
-                <children>
-                    <Label alignment="CENTER" text="0" textAlignment="CENTER">
-                        <font>
-                            <Font name="Comic Sans MS Bold" size="48.0" />
-                        </font>
-                        <styleClass>
-                            <String fx:value="titulo" />
-                            <String fx:value="texto-principal" />
-                        </styleClass>
-                    </Label>
-                    <Label layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Valor total em estoque R$" />
-                </children>
-                <HBox.margin>
-                    <Insets right="15.0" />
-                </HBox.margin>
-            </VBox>
-            <VBox fx:id="btnestoqueAbaixo" alignment="CENTER" layoutX="154.0" layoutY="20.0" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
-                <children>
-                    <Label alignment="CENTER" text="0" textAlignment="CENTER">
-                        <font>
-                            <Font name="Comic Sans MS Bold" size="48.0" />
-                        </font>
-                        <styleClass>
-                            <String fx:value="titulo" />
-                            <String fx:value="texto-principal" />
-                        </styleClass>
-                    </Label>
-                    <Label layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Estoque abaixo de 10" />
-                </children>
-                <HBox.margin>
-                    <Insets />
-                </HBox.margin>
-            </VBox>
-        </children>
-        <VBox.margin>
-            <Insets />
-        </VBox.margin>
-        <padding>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-        </padding>
-    </HBox>
-    <Button fx:id="btnVoltar2" mnemonicParsing="false" onAction="#aoVoltarMenu" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #d9abff;" styleClass="botao" text="Voltar">
-        <VBox.margin>
-            <Insets top="20.0" />
-        </VBox.margin>
-        <font>
-            <Font name="Bell MT" size="18.0" />
-        </font>
-    </Button>
-</children>
-<padding>
-    <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
-</padding>
+    <children>
+        <Label styleClass="texto-principal" text="Relatório de Produtos no Estoque">
+            <font>
+                <Font name="System Bold" size="20.0" />
+            </font>
+            <VBox.margin>
+                <Insets bottom="20.0" top="20.0" />
+            </VBox.margin>
+        </Label>
+        <HBox prefHeight="225.0" prefWidth="620.0">
+            <children>
+                <VBox alignment="CENTER" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="lblTotalProdutos" alignment="CENTER" text="0" textAlignment="CENTER">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="48.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="titulo" />
+                                <String fx:value="texto-principal" />
+                            </styleClass>
+                        </Label>
+                        <Label fx:id="lblTotalProdutos" layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Produtos Cadastrados" />
+                    </children>
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="205.0" prefWidth="292.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="lblValorTotal" alignment="CENTER" text="0" textAlignment="CENTER">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="48.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="titulo" />
+                                <String fx:value="texto-principal" />
+                            </styleClass>
+                        </Label>
+                        <Label fx:id="lblValorTotal" layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Valor total em estoque R$" />
+                    </children>
+                    <HBox.margin>
+                        <Insets right="15.0" />
+                    </HBox.margin>
+                </VBox>
+                <VBox alignment="CENTER" layoutX="154.0" layoutY="20.0" prefHeight="138.0" prefWidth="134.0" style="-fx-background-color: #FFF; -fx-background-radius: 15;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label fx:id="lblEstoqueBaixo" alignment="CENTER" text="0" textAlignment="CENTER">
+                            <font>
+                                <Font name="Comic Sans MS Bold" size="48.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="titulo" />
+                                <String fx:value="texto-principal" />
+                            </styleClass>
+                        </Label>
+                        <Label fx:id="lblEstoqueBaixo" layoutX="24.0" layoutY="105.0" styleClass="texto-secundario" text="Estoque abaixo de 10" />
+                    </children>
+                    <HBox.margin>
+                        <Insets />
+                    </HBox.margin>
+                </VBox>
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+        <Button mnemonicParsing="false" onAction="#aoVoltarAoMenu" prefHeight="35.0" prefWidth="130.0" style="-fx-background-color: #d9abff;" styleClass="botao" text="Voltar">
+            <VBox.margin>
+                <Insets top="20.0" />
+            </VBox.margin>
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Button>
+    </children>
+    <padding>
+        <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+    </padding>
 </VBox>
